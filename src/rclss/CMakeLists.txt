@@ -21,6 +21,8 @@ endif()
 
 target_link_libraries(${NAME_SUBPROJECT}
     dlib::dlib
+    blas
+    lapack
     Threads::Threads
 )
 
