@@ -1,7 +1,10 @@
 cmake_minimum_required(VERSION 3.2)
 set(NAME_SUBPROJECT rclst)
 
-add_executable(${NAME_SUBPROJECT} main.cpp)
+add_executable(${NAME_SUBPROJECT} main.cpp
+    input_parser.h input_parser.cpp
+    property_description.h
+    utils.h)
 
 set_target_properties(${NAME_SUBPROJECT} PROPERTIES
     CXX_STANDARD 14
