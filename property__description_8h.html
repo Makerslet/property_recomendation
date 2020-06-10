@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>property_recomendation: src/rclst/property_description.h File Reference</title>
+<title>property_recomendation: src/common/property_description.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,7 +60,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c273b7ca39a30d0d5d886937d632020e.html">rclst</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -73,22 +73,24 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
 <code>#include &lt;dlib/matrix.h&gt;</code><br />
+<code>#include &lt;dlib/clustering.h&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for property_description.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="property__description_8h__incl.png" border="0" usemap="#src_2rclst_2property__description_8h" alt=""/></div>
-<map name="src_2rclst_2property__description_8h" id="src_2rclst_2property__description_8h">
+<div class="center"><img src="property__description_8h__incl.png" border="0" usemap="#src_2common_2property__description_8h" alt=""/></div>
+<map name="src_2common_2property__description_8h" id="src_2common_2property__description_8h">
 <area shape="rect" id="node2" href="utils_8h.html" title="utils.h" alt="" coords="48,95,111,121"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="property__description_8h__dep__incl.png" border="0" usemap="#src_2rclst_2property__description_8hdep" alt=""/></div>
-<map name="src_2rclst_2property__description_8hdep" id="src_2rclst_2property__description_8hdep">
-<area shape="rect" id="node2" href="rclst_2main_8cpp.html" title="src/rclst/main.cpp" alt="" coords="5,95,143,121"/>
+<div class="center"><img src="property__description_8h__dep__incl.png" border="0" usemap="#src_2common_2property__description_8hdep" alt=""/></div>
+<map name="src_2common_2property__description_8hdep" id="src_2common_2property__description_8hdep">
+<area shape="rect" id="node2" href="rclss_2main_8cpp.html" title="src/rclss/main.cpp" alt="" coords="5,95,144,121"/>
+<area shape="rect" id="node3" href="rclst_2main_8cpp.html" title="src/rclst/main.cpp" alt="" coords="169,95,306,121"/>
 </map>
 </div>
 </div>
@@ -98,6 +100,8 @@ This graph shows which files directly or indirectly include this file:</div>
 Typedefs</h2></td></tr>
 <tr class="memitem:a012e9f052eba5329eeaa9b3c3fd45758"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="property__description_8h.html#a012e9f052eba5329eeaa9b3c3fd45758">property_entry</a> = dlib::matrix&lt; double, 7, 1 &gt;</td></tr>
 <tr class="separator:a012e9f052eba5329eeaa9b3c3fd45758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85c103716e411604ac531ce4ac4bd295"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="property__description_8h.html#a85c103716e411604ac531ce4ac4bd295">property_kernel</a> = dlib::linear_kernel&lt; <a class="el" href="property__description_8h.html#a012e9f052eba5329eeaa9b3c3fd45758">property_entry</a> &gt;</td></tr>
+<tr class="separator:a85c103716e411604ac531ce4ac4bd295"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8949563840c53cf8a470b8c46769dac"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="property__description_8h.html#ae8949563840c53cf8a470b8c46769dac">property_entries</a> = std::vector&lt; <a class="el" href="property__description_8h.html#a012e9f052eba5329eeaa9b3c3fd45758">property_entry</a> &gt;</td></tr>
 <tr class="separator:ae8949563840c53cf8a470b8c46769dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5095da84f8b10a522ff75bf5eaa6dfd2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="property__description_8h.html#a5095da84f8b10a522ff75bf5eaa6dfd2">proto_filter</a> = std::function&lt; bool(const std::string &amp;)&gt;</td></tr>
@@ -111,6 +115,10 @@ Functions</h2></td></tr>
 <tr class="separator:abf823d991603f11043e07afaeff07313"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a539b1744cf4ec7df57dc853efa4413b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="property__description_8h.html#ad8289d4e1596f69a50ffc54650f3291b">proto_transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="property__description_8h.html#a539b1744cf4ec7df57dc853efa4413b6">string_to_property_lambda</a> ()</td></tr>
 <tr class="separator:a539b1744cf4ec7df57dc853efa4413b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af81b16a62097c76ef8290da2906b3f59"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="property__description_8h.html#af81b16a62097c76ef8290da2906b3f59">distance</a> (const <a class="el" href="property__description_8h.html#a012e9f052eba5329eeaa9b3c3fd45758">property_entry</a> &amp;<a class="el" href="rclst_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>, const <a class="el" href="property__description_8h.html#a012e9f052eba5329eeaa9b3c3fd45758">property_entry</a> &amp;other)</td></tr>
+<tr class="separator:af81b16a62097c76ef8290da2906b3f59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6363dbe623a0502bf3f5a64dfb6e0c8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="property__description_8h.html#af6363dbe623a0502bf3f5a64dfb6e0c8">to_string</a> (const <a class="el" href="property__description_8h.html#a012e9f052eba5329eeaa9b3c3fd45758">property_entry</a> &amp;entry)</td></tr>
+<tr class="separator:af6363dbe623a0502bf3f5a64dfb6e0c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="ae8949563840c53cf8a470b8c46769dac"></a>
@@ -135,6 +143,20 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="property__description_8h.html#a012e9f052eba5329eeaa9b3c3fd45758">property_entry</a> =  dlib::matrix&lt;double, 7, 1&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a85c103716e411604ac531ce4ac4bd295"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85c103716e411604ac531ce4ac4bd295">&#9670;&nbsp;</a></span>property_kernel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="property__description_8h.html#a85c103716e411604ac531ce4ac4bd295">property_kernel</a> =  dlib::linear_kernel&lt;<a class="el" href="property__description_8h.html#a012e9f052eba5329eeaa9b3c3fd45758">property_entry</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -170,6 +192,34 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="af81b16a62097c76ef8290da2906b3f59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af81b16a62097c76ef8290da2906b3f59">&#9670;&nbsp;</a></span>distance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double distance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="property__description_8h.html#a012e9f052eba5329eeaa9b3c3fd45758">property_entry</a> &amp;&#160;</td>
+          <td class="paramname"><em>main</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="property__description_8h.html#a012e9f052eba5329eeaa9b3c3fd45758">property_entry</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="abf823d991603f11043e07afaeff07313"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abf823d991603f11043e07afaeff07313">&#9670;&nbsp;</a></span>filter()</h2>
 
@@ -197,6 +247,24 @@ Functions</h2></td></tr>
           <td class="memname"><a class="el" href="property__description_8h.html#ad8289d4e1596f69a50ffc54650f3291b">proto_transform</a> string_to_property_lambda </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6363dbe623a0502bf3f5a64dfb6e0c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6363dbe623a0502bf3f5a64dfb6e0c8">&#9670;&nbsp;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="property__description_8h.html#a012e9f052eba5329eeaa9b3c3fd45758">property_entry</a> &amp;&#160;</td>
+          <td class="paramname"><em>entry</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
