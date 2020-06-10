@@ -10,7 +10,7 @@ add_executable(${NAME_SUBPROJECT} main.cpp
 target_include_directories(${NAME_SUBPROJECT} PRIVATE ${COMMON_PATH})
 
 set_target_properties(${NAME_SUBPROJECT} PROPERTIES
-    CXX_STANDARD 17
+    CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
 )
 

@@ -3,6 +3,7 @@
 #include <iostream>
 #include <experimental/filesystem>
 #include <stdexcept>
+#include <unordered_map>
 
 namespace filesystem = std::experimental::filesystem;
 
