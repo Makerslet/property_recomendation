@@ -10,7 +10,6 @@
 
 
 using strings = std::vector<std::string>;
-typedef dlib::linear_kernel<property_entry> property_kernel;
 
 int main(int argc, char** argv)
 {

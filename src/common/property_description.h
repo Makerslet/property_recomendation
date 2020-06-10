@@ -4,11 +4,13 @@
 #include "utils.h"
 
 #include <dlib/matrix.h>
+#include <dlib/clustering.h>
 
 #include <string>
 #include <vector>
 
 using property_entry = dlib::matrix<double, 7, 1>;
+using property_kernel = dlib::linear_kernel<property_entry>;
 using property_entries = std::vector<property_entry>;
 
 using proto_filter = std::function<bool(const std::string&)>;
@@ -51,6 +53,25 @@ proto_transform string_to_property_lambda()
 
         return entry;
     };
+}
+
+double distance(const property_entry& main, const property_entry& other)
+{
+    double summ_squares = std::pow((main(0) - other(0)), 2) +
+            std::pow((main(1) - other(1)), 2);
+
+    return std::sqrt(summ_squares);
+}
+
+std::string to_string(const property_entry& entry)
+{
+    std::stringstream ss;
+
+    for(size_t i = 0; i < 6; ++i)
+        ss << entry(i) << ";";
+    ss << entry(6);
+
+    return ss.str();
 }
 
 #endif // PROPERTY_DESCRIPTION_H

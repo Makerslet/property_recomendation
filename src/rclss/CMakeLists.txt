@@ -1,10 +1,16 @@
 cmake_minimum_required(VERSION 3.2)
 set(NAME_SUBPROJECT rclss)
 
-add_executable(${NAME_SUBPROJECT} main.cpp)
+set(COMMON_PATH ${CMAKE_SOURCE_DIR}/src/common)
+
+add_executable(${NAME_SUBPROJECT} main.cpp
+    ${COMMON_PATH}/property_description.h
+    ${COMMON_PATH}/utils.h)
+
+target_include_directories(${NAME_SUBPROJECT} PRIVATE ${COMMON_PATH})
 
 set_target_properties(${NAME_SUBPROJECT} PROPERTIES
-    CXX_STANDARD 14
+    CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
 )
 
