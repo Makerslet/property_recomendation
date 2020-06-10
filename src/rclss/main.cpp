@@ -1,8 +1,10 @@
 #include "property_description.h"
 
 #include <iostream>
-#include <filesystem>
+#include <experimental/filesystem>
 #include <stdexcept>
+
+namespace filesystem = std::experimental::filesystem;
 
 int main(int argc, char** argv)
 {
@@ -16,16 +18,16 @@ int main(int argc, char** argv)
     std::string model_name = name + ".dat.model";
     std::string data_name = name + ".dat.data";
 
-    std::filesystem::path model_path = std::filesystem::current_path().append(model_name);
-    std::filesystem::path data_path = std::filesystem::current_path().append(data_name);
+    filesystem::path model_path = filesystem::current_path().append(model_name);
+    filesystem::path data_path = filesystem::current_path().append(data_name);
 
-    if(!std::filesystem::exists(model_path))
+    if(!filesystem::exists(model_path))
     {
         std::cout << "File with model doesnt't exists" << std::endl;
         return 1;
     }
 
-    if(!std::filesystem::exists(data_path))
+    if(!filesystem::exists(data_path))
     {
         std::cout << "File with data doesn't exists" << std::endl;
         return 1;

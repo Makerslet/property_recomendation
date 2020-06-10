@@ -30,6 +30,7 @@ target_link_libraries(${NAME_SUBPROJECT}
     blas
     lapack
     Threads::Threads
+    stdc++fs
 )
 
 
